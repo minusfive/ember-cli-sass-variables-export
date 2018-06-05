@@ -1,8 +1,8 @@
 import { module, test } from 'ember-qunit';
-import t1Styles from "ember-export-sass-variables/utils/t1";
-import t2Styles from "ember-export-sass-variables/utils/t2";
-import t3Styles from "ember-export-sass-variables/utils/t3";
-import t4Styles from "ember-export-sass-variables/utils/t4";
+import t1Styles from "ember-cli-sass-variables-export/utils/t1";
+import t2Styles from "ember-cli-sass-variables-export/utils/t2";
+import t3Styles from "ember-cli-sass-variables-export/utils/t3";
+import t4Styles from "ember-cli-sass-variables-export/utils/t4";
 
 module('Unit | Styles');
 

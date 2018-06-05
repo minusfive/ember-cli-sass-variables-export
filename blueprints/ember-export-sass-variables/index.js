@@ -1,6 +1,6 @@
 /*jshint node:true*/
 module.exports = {
-  description: 'ember-cli-sass-variables',
+  description: 'ember-cli-sass-variables-export',
   normalizeEntityName: function() {},
 
   afterInstall: function() {

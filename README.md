@@ -1,39 +1,40 @@
 
-# ember-export-sass-variables
+# ember-cli-sass-variables-export
 
-<img src='http://emberobserver.com/badges/ember-export-sass-variables.svg' >
+<!-- <img src='http://emberobserver.com/badges/ember-export-sass-variables.svg' > -->
 
-### Note: This project is no longer maintained!
-If you find this project useful, please feel free to fork and make it your own. 
-
-Export your SASS variables and access them through a utility. This addon supports any lists / maps / nested maps and uses the built in node-sass functions to parse values.
+Export your Sass variables and access them through a utility. This addon [should] support most [Sass Data Types](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#data_types), including lists, maps, nested maps, colors, etc., and uses the node-sass native functions to parse values.
 
 ## Methods
 
-`export (utilName: String, contents: any)`
+```scss
+export(utilName: String, contents: any)
+```
 
-The export method is used in your SASS file to tell the compiler what name the utility file is, and what variables to export inside.
+The export method is used in your Sass file to tell the compiler what name the utility file is, and what variables to export inside.
 
 ## Usage
-Two parts: Define a sass export and import the utility that matches the name of the export.
+First, define a sass export and import the utility that matches the name of the export.
 
-```css
-$export: export('colors', (
-  colors: $colors,
-  themes: $themes
+```scss
+$export: export('colors' /* <- this will be the util file name */, (
+  'colors': $colors,
+  'themes': $themes
 ));
 ```
 
 ```js
-import styles from 'ember-export-sass-variables/utils/colors';
+import styles from 'ember-cli-sass-variables-export/utils/colors';
 ```
 
 ## Installation
-`ember install ember-export-sass-variables`
+`ember install ember-cli-sass-variables-export`
 
 ## Credits
 
-Thanks to these projects, I would not have been able to create this:
+Forked from https://github.com/mikemunsie/ember-export-sass-variables (no longer maintained).
+
+#### Original Project Credits:
 
 - https://github.com/Punk-UnDeaD/node-sass-export
 - https://github.com/davidpett/ember-cli-sass-variables

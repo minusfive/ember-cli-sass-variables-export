@@ -1,17 +1,23 @@
 {
-  "name": "ember-export-sass-variables",
-  "version": "1.0.0",
-  "description": "Export SASS Variables and import through ember utils",
+  "name": "ember-cli-sass-variables-export",
+  "version": "0.0.1",
+  "description": "Export Sass Variables as JSON and import through auto-generated Ember Utils",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "Michael Munsie",
+  "contributors": [
+    {
+      "name": "Jorge Villalobos",
+      "url": "https://github.com/minusfive/"
+    },
+    {"name": "Michael Munsie"}
+  ],
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/mikemunsie/ember-export-sass-variables",
+  "repository": "https://github.com/minusfive/ember-cli-sass-variables-export",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
