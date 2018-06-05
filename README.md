@@ -3,7 +3,9 @@
 
 <!-- <img src='http://emberobserver.com/badges/ember-export-sass-variables.svg' > -->
 
-Export your Sass variables and access them through a utility. This addon [should] support most [Sass Data Types](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#data_types), including lists, maps, nested maps, colors, etc., and uses the node-sass native functions to parse values.
+Export your Sass variables and access them through auto-generated Ember utilities.
+
+This addon [should] support most [Sass Data Types](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#data_types), including lists, maps, nested maps, colors, etc., and uses the node-sass native functions to parse values.
 
 ## Methods
 
