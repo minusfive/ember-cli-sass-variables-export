@@ -1,7 +1,7 @@
 
 # ember-cli-sass-variables-export
 
-[![Ember Observer Score](https://emberobserver.com/badges/ember-cli-sass-variables-export.svg)](https://emberobserver.com/addons/ember-cli-sass-variables-export) [![npm version](https://badge.fury.io/js/ember-cli-sass-variables-export.svg)](https://badge.fury.io/js/ember-cli-sass-variables-export)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-cli-sass-variables-export.svg)](https://emberobserver.com/addons/ember-cli-sass-variables-export) [![npm version](https://badge.fury.io/js/ember-cli-sass-variables-export.svg)](https://badge.fury.io/js/ember-cli-sass-variables-export) [![Build Status](https://travis-ci.org/minusfive/ember-cli-sass-variables-export.svg?branch=master)](https://travis-ci.org/minusfive/ember-cli-sass-variables-export)
 
 Export Sass `$variable` values as JSON data to [Ember Utilities](https://guides.emberjs.com/v3.1.0/tutorial/service/#toc_accessing-the-google-maps-api-with-a-utility), so they can be consumed from the rest of your app. The idea is to help you step closer to an SSoT for style-related data/documentation (e.g. populating styling documentation with [Ember Freestyle](http://ember-freestyle.com/)).
 
