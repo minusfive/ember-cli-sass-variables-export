@@ -3,7 +3,6 @@ language: node_js
 node_js:
   # we recommend testing addons with the same minimum supported node version as Ember CLI
   # so that your addon works for all apps
-  - "4"
   - "6"
   - "8"
   - "9"
@@ -49,6 +48,14 @@ install:
 
 script:
   - yarn lint:js
+
+  # A quirk of this addon is that first time tests are run, because of
+  # the order in which the Sass compiler is invoked on ember, the
+  # generated utils aren't found, so tests fail. 2nd time onwards they
+  # work. Building before running tests gets around this issue.
+  # Should only build if necessary.
+  - if [[ ! -d "./dist" ]]; then node_modules/.bin/ember build --skip-cleanup; fi
+
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
