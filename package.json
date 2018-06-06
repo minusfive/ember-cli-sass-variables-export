@@ -27,7 +27,7 @@
     "test": "if [[ ! -d \"./dist\" ]]; then node_modules/.bin/ember build; fi; ember test",
     "test:all": "if [[ ! -d \"./dist\" ]]; then node_modules/.bin/ember build; fi && ember try:each",
     "preversion": "npm test",
-    "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags --signed"
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0"
