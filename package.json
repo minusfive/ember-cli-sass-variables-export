@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "Export Sass Variables as JSON and import through auto-generated Ember Utils",
   "keywords": [
-    "ember-addon"
+    "ember",
+    "ember-addon",
+    "ember-cli",
+    "ember-cli-addon",
+    "ember-cli-sass",
+    "emberjs",
+    "emberjs-addon",
+    "emberjs-frontend",
+    "sass",
+    "sass-functions",
+    "node-sass"
   ],
   "license": "MIT",
   "contributors": [
