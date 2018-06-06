@@ -3,7 +3,7 @@
 
 [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-sass-variables-export.svg)](https://emberobserver.com/addons/ember-cli-sass-variables-export) [![npm version](https://badge.fury.io/js/ember-cli-sass-variables-export.svg)](https://badge.fury.io/js/ember-cli-sass-variables-export)
 
-Export Sass variables as JSON data to auto-generated Ember utils, so they can be consumed from the rest of your app. The idea is to help you step closer to an SSOT for style-related data/documentation (e.g. I'm using it to generate styling components for documentation with [Ember Freestyle](http://ember-freestyle.com/)).
+Export Sass `$variable` values as JSON data to [Ember Utilities](https://guides.emberjs.com/v3.1.0/tutorial/service/#toc_accessing-the-google-maps-api-with-a-utility), so they can be consumed from the rest of your app. The idea is to help you step closer to an SSoT for style-related data/documentation (e.g. populating styling documentation with [Ember Freestyle](http://ember-freestyle.com/)).
 
 ## Installation
 `ember i ember-cli-sass-variables-export`
@@ -12,32 +12,41 @@ Export Sass variables as JSON data to auto-generated Ember utils, so they can be
 
 ### 1. Use The `export` Sass Function
 
-This addon makes an `export` Sass function available to your app (or addon), with the following signature:
+This addon makes an `export` Sass function available in your app/addon. Use it to export the value of a `$variable` to an Ember Utility file (as JSON), like so:
 
 ```scss
-$export: export('util-name' /* string */, $variables /* $your-variables */);
+/**
+@function export
+  @param  {string}  fileName  - Ember Utility file name for output
+  @param  {*any*}   value     - $variable value to be exported
+  @returns value              - Returns the untouched value you passed
+*/
+$my-sass-variable: export('util-file-name', $value);
 ```
 
-The **first argument** for the `export` function is a `string`, used as the name for the utility file your variables will be exported to (as JSON).
+The **first argument** is a `string`, used as the _name for the utility file_ your variable value will be exported to.
 
-For the **second argument** you can pass the [one or more] `$variables` you wish to export. Most [Sass Data Types](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#data_types) are supported for the `$variables` argument, including **lists**, [nested] **maps**, **colors**, etc.. Nnode-sass' native functions are used to parse the values.
+The **second argument** is the _value_ for the `$variable`. All [Sass Data Types](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#data_types) are [should be?] supported, (i.e. **lists**, [nested] **maps**, **colors**, etc.), since node-sass' native functions are used to parse the data.
 
-*IMPORTANT:* Make sure all your map keys are quoted. This is just good practice (becoming standardized convention), and will save you a ton of headaches.
+**IMPORTANT:** _Make sure all your **map keys** are **`'quoted'`**. This is just good practice and will save you a ton of headaches._
 
-### 2. Import Generated Util
+### 2. Import Generated Ember Utility
 
-You should now be able to import your variables from your components, controllers, etc.
+Import the generated utility from your components, controllers, etc.
 
 ```js
-import mySassVars from 'ember-cli-sass-variables-export/utils/my-sass-vars';
+import mySassVar from 'ember-cli-sass-variables-export/utils/util-file-name';
 ```
 
 ### 3. Profit!
 
 ## Examples
+
+Simple example showing how to export color palettes defined in your Sass:
+
 ```scss
 // app/styles/settings/colors.scss
-$color-palette: (
+$color-palette: export('color-palette', (
   'primary': (
     'base': $color-brand--primary,
     'light': mix($color-white, $color-brand--primary, 33%),
@@ -51,13 +60,13 @@ $color-palette: (
     'dark': mix($color-black, $color-brand--secondary, 33%),
     'accent': $color-brand--secondary--accent
   )
-);
-
-$export: export('color-palette', $color-palette);
+));
+// $color-palette can continue to be used in your Sass
 ```
 
 ```js
-// output: /app/utils/color-palette.js
+// /app/utils/color-palette.js
+// Generated Ember Utility output
 exports default = {
   "primary": {
     "base": "rgb(161, 148, 213)",
@@ -86,11 +95,12 @@ export default Component.extend({
 ```
 
 ```hbs
-{{! app/templates/components/my-component.js }}
+<!-- app/templates/components/my-component.js  -->
 {{#each-in colorPalette as |color shade|}}
   {{#each-in shade as |shadeKey shadeColor|}}
     <div style="background-color: {{shadeColor}}">
       {{color}}--{{shade}}
+      ({{shadeColor}})
     </div>
   {{/each-in}}
 {{/each-in}}
