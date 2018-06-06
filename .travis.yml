@@ -4,6 +4,10 @@ node_js:
   # we recommend testing addons with the same minimum supported node version as Ember CLI
   # so that your addon works for all apps
   - "4"
+  - "6"
+  - "8"
+  - "9"
+  - "10"
 
 sudo: false
 dist: trusty
@@ -35,6 +39,8 @@ matrix:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
+  # travis currently includes yarn v0.17.8 (20170705)
+  # this isn't new enough for our use of --non-interactive
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
 
