@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-sass-variables-export",
   "version": "1.0.0",
-  "description": "Export Sass Variables as JSON and import through auto-generated Ember Utils",
+  "description": "Export Sass $variable values as JSON data to Ember Utilities, so they can be consumed from the rest of your app.",
   "keywords": [
     "ember",
     "ember-addon",
