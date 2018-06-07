@@ -1,7 +1,11 @@
 
 # ember-cli-sass-variables-export
 
-[![Ember Observer Score](https://emberobserver.com/badges/ember-cli-sass-variables-export.svg)](https://emberobserver.com/addons/ember-cli-sass-variables-export) [![npm version](https://badge.fury.io/js/ember-cli-sass-variables-export.svg)](https://badge.fury.io/js/ember-cli-sass-variables-export) [![Build Status](https://travis-ci.org/minusfive/ember-cli-sass-variables-export.svg?branch=master)](https://travis-ci.org/minusfive/ember-cli-sass-variables-export)
+
+[![GitHub license](https://img.shields.io/github/license/minusfive/ember-cli-sass-variables-export.svg)](https://github.com/minusfive/ember-cli-sass-variables-export/blob/master/LICENSE.md)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-cli-sass-variables-export.svg)](https://emberobserver.com/addons/ember-cli-sass-variables-export)
+[![npm version](https://badge.fury.io/js/ember-cli-sass-variables-export.svg)](https://badge.fury.io/js/ember-cli-sass-variables-export)
+[![Build Status](https://travis-ci.org/minusfive/ember-cli-sass-variables-export.svg?branch=master)](https://travis-ci.org/minusfive/ember-cli-sass-variables-export)
 
 Export Sass `$variable` values as JSON data to [Ember Utilities](https://guides.emberjs.com/v3.1.0/tutorial/service/#toc_accessing-the-google-maps-api-with-a-utility), so they can be consumed from the rest of your app. The idea is to help you step closer to an SSoT for style-related data/documentation (e.g. populating styling documentation with [Ember Freestyle](http://ember-freestyle.com/)).
 
@@ -109,6 +113,28 @@ export default Component.extend({
 ## Bugs
 
 Please report any bugs [through issues](https://github.com/minusfive/ember-cli-sass-variables-export/issues).
+
+## Contributing
+
+### Installation
+
+* `git clone <repository-url>`
+* `cd ember-cli-sass-variables-export`
+* `yarn install`
+
+### Linting
+
+* `yarn lint:js`
+* `yarn lint:js --fix`
+
+### Running tests
+
+* `yarn test` – Runs the test suite on the current Ember version
+* `yarn test:all` – Runs the test suite against multiple Ember versions
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Credits
 
