@@ -50,7 +50,7 @@ Simple example showing how to export color palettes defined in your Sass:
 
 ```scss
 // app/styles/settings/colors.scss
-$color-palette: export('color-palette', (
+$color-palette: (
   'primary': (
     'base': $color-brand--primary,
     'light': mix($color-white, $color-brand--primary, 33%),
@@ -64,8 +64,8 @@ $color-palette: export('color-palette', (
     'dark': mix($color-black, $color-brand--secondary, 33%),
     'accent': $color-brand--secondary--accent
   )
-));
-// $color-palette can continue to be used in your Sass
+);
+$color-palette-export: export('color-palette', $color-palette);
 ```
 
 ```js
