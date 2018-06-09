@@ -98,6 +98,7 @@ export default Component.extend({
 });
 ```
 
+[//]: # ({% raw %})
 ```hbs
 <!-- app/templates/components/my-component.js  -->
 {{#each-in colorPalette as |color shade|}}
@@ -109,6 +110,7 @@ export default Component.extend({
   {{/each-in}}
 {{/each-in}}
 ```
+[//]: # ({% endraw %})
 
 ## Bugs
 
