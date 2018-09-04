@@ -21,3 +21,6 @@ testem.log
 .node_modules.ember-try/
 bower.json.ember-try
 package.json.ember-try
+
+# Ignore package-lock.json to avoid conflicts w/yarn.lock
+package-lock.json
