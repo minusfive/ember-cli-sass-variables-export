@@ -116,6 +116,10 @@ export default Component.extend({
 
 Please report any bugs [through issues](https://github.com/minusfive/ember-cli-sass-variables-export/issues).
 
+### Known Issues
+
+* Double build initially triggered, believe caused by initial JS variables files generation after initial Sass parsing/project build, which makes the watch process trigger a new build. This hasn't caused a problem yet, but open to PRs to correct it.
+
 ## Contributing
 
 ### Installation
