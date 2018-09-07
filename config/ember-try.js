@@ -57,6 +57,17 @@ module.exports = function() {
           }
         },
         {
+          name: 'ember-release-with-old-ember-cli-sass',
+          npm: {
+            devDependencies: {
+              'ember-source': urls[0],
+              'ember-cli-sass': '^7.2.0',
+              'sass': null,
+              'node-sass': null
+            }
+          }
+        },
+        {
           name: 'ember-beta',
           npm: {
             devDependencies: {
