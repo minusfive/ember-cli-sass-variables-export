@@ -5,7 +5,7 @@ const VersionChecker = require('ember-cli-version-checker');
 
 function getDefaultSass() {
   try {
-    // eslint-disable-next-line node/no-extraneous-require, node/no-missing-require node/no-unpublished-require
+    // eslint-disable-next-line node/no-extraneous-require, node/no-missing-require, node/no-unpublished-require
     return require('sass');
   } catch (e) {
     let error = new Error(
