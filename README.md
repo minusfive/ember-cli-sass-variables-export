@@ -9,6 +9,8 @@
 
 Export Sass `$variable` values as JSON data to [Ember Utilities](https://guides.emberjs.com/v3.1.0/tutorial/service/#toc_accessing-the-google-maps-api-with-a-utility), so they can be consumed from the rest of your app. The idea is to help you step closer to an SSoT for style-related data/documentation (e.g. populating styling documentation with [Ember Freestyle](http://ember-freestyle.com/)).
 
+This addon is meant to be used with ember-cli-sass. Works with both dart sass and node-sass implementations. Check [ember-cli-sass docs](https://github.com/aexmachina/ember-cli-sass) for more information on how to provide your preferred implementation.
+
 ## Installation
 `ember i ember-cli-sass-variables-export`
 

@@ -30,6 +30,6 @@ module.exports = {
       app.options.sassOptions.functions = {};
     }
 
-    Object.assign(app.options.sassOptions.functions, exportSass(path.join(__dirname, 'addon', 'utils')));
+    Object.assign(app.options.sassOptions.functions, exportSass(path.join(__dirname, 'addon', 'utils'), app.options.sassOptions.implementation));
   }
 };
