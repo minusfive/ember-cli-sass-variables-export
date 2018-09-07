@@ -3,9 +3,18 @@
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
-  let app = new EmberAddon(defaults, {
-    // Add options here
-  });
+  let options = {};
+
+  if (process.env.USE_NODE_SASS) {
+    options = {
+      sassOptions: {
+        // eslint-disable-next-line node/no-extraneous-require, node/no-missing-require
+        implementation: require('node-sass')
+      }
+    };
+  }
+
+  let app = new EmberAddon(defaults, options);
 
   /*
     This build file specifies the options for the dummy test app of this

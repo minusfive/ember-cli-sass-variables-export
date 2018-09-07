@@ -44,6 +44,19 @@ module.exports = function() {
           }
         },
         {
+          name: 'ember-release-node-sass',
+          env: {
+            USE_NODE_SASS: true
+          },
+          npm: {
+            devDependencies: {
+              'ember-source': urls[0],
+              'sass': null,
+              'node-sass': '^4.9.3'
+            }
+          }
+        },
+        {
           name: 'ember-beta',
           npm: {
             devDependencies: {
