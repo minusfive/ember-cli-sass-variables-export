@@ -5850,8 +5850,8 @@ sane@^2.2.0, sane@^2.4.1, sane@^2.5.2:
     fsevents "^1.2.3"
 
 sass@^1.13.2:
-  version "1.13.2"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.13.2.tgz#e4c43cf3cc9e8451960831dc66a5b76a3b038024"
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.14.0.tgz#ace6b0230efd2b1fb2cd622e69118fe450852f97"
   dependencies:
     chokidar "^2.0.0"
 
