@@ -6127,8 +6127,8 @@ sane@^4.0.0:
     watch "~0.18.0"
 
 sass@^1.13.2:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.16.1.tgz#3abbb04562c9e3a3ee11c3056956294ed333f6e6"
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.17.0.tgz#e370b9302af121c9eadad5639619127772094ae6"
   dependencies:
     chokidar "^2.0.0"
 
