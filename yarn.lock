@@ -6021,8 +6021,8 @@ sane@^4.0.0:
     watch "~0.18.0"
 
 sass@^1.13.2:
-  version "1.18.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.18.0.tgz#f34371c31e268e555c2ac8e43d2b64d194e7d090"
+  version "1.19.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.19.0.tgz#5de82c713d4299fac57384ef5219534a37fe3e6c"
   dependencies:
     chokidar "^2.0.0"
 
